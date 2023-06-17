@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -12,33 +13,33 @@
                 $("#p2").css("background-color", "white");
                 $("#p3").css("background-color", "white");
             });
+
             $("#btnTroca2").click(function(){
                 $("#p1").css("background-color", "white");
                 $("#p2").css("background-color", "cyan");
                 $("#p3").css("background-color", "white");
             });
+
             $("#btnTroca3").click(function(){
                 $("#p1").css("background-color", "white");
                 $("#p2").css("background-color", "white");
                 $("#p3").css("background-color", "cyan");
             });
-
-        });
+        });        
     </script>
 </head>
 <body>
     <div>
         <button id="btnTroca1">Trocar cor em P1</button>
-        <p id="p1">Este é o p1.</p>
+        <p id="p1">Este é o P1.</p>
     </div>
     <div>
         <button id="btnTroca2">Trocar cor em P2</button>
-        <p id="p2">Este é o p2.</p>
+        <p id="p2">Este é o P2.</p>
     </div>
     <div>
         <button id="btnTroca3">Trocar cor em P3</button>
-        <p id="p3">Este é o p3.</p>
+        <p id="p3">Este é o P3.</p>
     </div>
-
 </body>
 </html>

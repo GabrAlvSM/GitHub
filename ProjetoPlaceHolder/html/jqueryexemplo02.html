@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -9,33 +10,33 @@
     <script type="text/javascript">
         $(function(){
             $("#btnExibir").click(function(){
-                var msg= $("#txtMensagem").val();
+                var msg = $("#txtMensagem").val();
                 if (isEmpty(msg)){
                     ExibirErro();
                 }
                 else {
                     ExibirMensagem(msg);
                 }
+            });
+
+            function ExibirMensagem(msg){
+                $("#lblMensagem").text("você digitou: " + msg);
+            }
+
+            function ExibirErro(){
+                alert("Deu ruim, você não digitou nada!!!")
+            }
         });
-
-        function ExibirMensagem(msg){
-            $("#lblMensagem").text("Você digitou: " +msg)
-        }
-
-        function ExibirErro(){
-            alert("Você não digitou nada")
-        }
-    });
-</script>
+    </script>    
 </head>
 <body>
     <div>
         <label>Digite uma mensagem:</label>
-        <imput type="text" id="txtMensagem" />
+        <input type="text" id="txtMensagem" />
     </div>
     <br>
     <div>
-        <button id="brnExibir">Confira</button>
+        <button id="btnExibir">Confira</button>
         <br>
         <h1 id="lblMensagem"></h1>
     </div>
